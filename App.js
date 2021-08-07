@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Appbar, Provider as PaperProvider } from 'react-native-paper';
 
-export default function App() {
+
+import HomeScreen from './screens/HomeScreen';
+
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <PaperProvider>
+         <Appbar.Header style={styles.bar}>
+            <Appbar.Content title='Users'  />
+        </Appbar.Header>
+        <HomeScreen />
+    </PaperProvider>
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  bar:{
+    backgroundColor: '#000'
+  }
+})
+
+export default App;
