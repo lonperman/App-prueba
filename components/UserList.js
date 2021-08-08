@@ -1,6 +1,7 @@
-import * as React from 'react';
-import { FlatList,StyleSheet,View, Text } from 'react-native';
-import {DataTable } from 'react-native-paper';
+import React,{useState,useEffect} from 'react';
+import { FlatList,StyleSheet,View} from 'react-native';
+import {DataTable,Text,Divider } from 'react-native-paper';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 import UserItem from './UserItem';
 import {Users} from '../api';
@@ -9,7 +10,7 @@ import {Users} from '../api';
 
 const UserList = () => {
 
-    const [User,setUser] = React.useState([]);
+    const [User,setUser] = useState([]);
 
    
 
@@ -18,7 +19,7 @@ const UserList = () => {
         setUser(data);
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
         loadUsers();
     },[]);
 
@@ -31,17 +32,21 @@ const UserList = () => {
             <DataTable style={styles.container}>
                 <DataTable.Header>
                     <DataTable.Title >
-                        <Text style={styles.itemText}>Nombre</Text>
+                        <Text style={styles.itemText}>Name</Text>
                     </DataTable.Title>
                     <DataTable.Title>
                         <Text style={styles.itemText}>Email</Text>
                     </DataTable.Title>
                     <DataTable.Title>
-                        <Text style={styles.itemText}>Ciudad</Text>
+                        <Text style={styles.itemText}>City</Text>
                     </DataTable.Title>
                     <DataTable.Title>
-                        <Text style={styles.itemText}>Compañia</Text>
+                        <Text style={styles.itemText}>Company</Text>
                     </DataTable.Title>
+                    <DataTable.Title>
+                        <Text style={styles.itemText}>Action</Text>
+                    </DataTable.Title>
+                    <Divider />
                 </DataTable.Header>
            
             </DataTable>
@@ -58,14 +63,18 @@ const UserList = () => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
-        width: '60%', 
-        padding: 5,
-        borderRadius: 10
+        backgroundColor: '#40e0d0',
+        width: wp('97%'),
+        height: hp('10%'), 
+        padding: 10,
+        borderRadius: 10,
+        textAlign: 'auto'
     },
     itemText:{
         fontSize: 15,
-        color: '#000'
+        color: '#000',
+        fontWeight: 'bold'
+        
     }
 
 })

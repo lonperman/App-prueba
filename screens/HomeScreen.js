@@ -1,10 +1,7 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
 
 
 import Layout from '../components/Layout';
-
-
 import UserList from '../components/UserList';
 
 

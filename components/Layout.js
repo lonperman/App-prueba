@@ -1,21 +1,27 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Appbar } from 'react-native-paper';
+import { View, StyleSheet, StatusBar } from 'react-native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 const Layout = ({children}) => {
     return <View style={styles.container} >
+        <StatusBar style={styles.bar}/>
         {children}
     </View>
 };
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#000',
+        backgroundColor: '#ffffe0',
         flex: 1,
         alignItems: 'center',
-        padding: 20,
+        padding: 5,
         flexDirection: 'row',
-        width: '100%'
+        width: wp('100%'),
+        height: hp('100%'), 
+    },
+    bar:{
+        width: wp('100%'),
+        height: hp('10%'), 
     }
 });
 
