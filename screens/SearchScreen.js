@@ -3,7 +3,9 @@ import { FlatList, StyleSheet,View } from 'react-native';
 import { Text,Card ,List,Paragraph,Searchbar } from 'react-native-paper';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
+//Screen
 import Layout from '../components/Layout';
+//Call APi
 import {Users} from '../api';
 
 const SearchScreen = () => {

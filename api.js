@@ -5,8 +5,3 @@ export const Users = async () => {
     const data = res.json();
     return data;
 };
-
-export const FindUserId = async (id) => {
-    const res = await fetch(`${API}/${id}`);
-    return await res.json();
-}

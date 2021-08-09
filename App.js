@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Avatar} from 'react-native-paper';
 
-
+//Screen
 import HomeScreen from './screens/HomeScreen';
 import UserInfoScreen from './screens/UserInfoScreen';
 import SearchScreen from './screens/SearchScreen';
@@ -57,10 +57,5 @@ const App = () => {
   )
 }
 
-const styles = StyleSheet.create({
-  bar:{
-    backgroundColor: '#000'
-  }
-})
 
 export default App;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet,TouchableOpacity } from 'react-native';
-import {DataTable,Text, Divider, Avatar } from 'react-native-paper';
+import {DataTable,Text, Avatar } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
@@ -9,7 +9,6 @@ const UserItem = (users) => {
     
     const {user} = users;
     const navigation = useNavigation();
-
 
     return (
      
@@ -40,7 +39,6 @@ const UserItem = (users) => {
                     </DataTable.Cell>
                 </DataTable.Row>
             </DataTable>
-       
     )
 
 };
@@ -58,7 +56,9 @@ const styles = StyleSheet.create({
     },
     itemtext: {
         fontSize:13,
+        fontWeight: 'normal',
         color: '#000',
+        fontFamily: 'tahoma'
     }
 })
 

@@ -1,20 +1,18 @@
 import React,{useState,useEffect} from 'react';
 import { FlatList,StyleSheet,View} from 'react-native';
 import {DataTable,Text} from 'react-native-paper';
-import { useNavigation } from '@react-navigation/native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
+//Screen
 import UserItem from './UserItem';
+//Call Api
 import {Users} from '../api';
-
 
 
 const UserList = () => {
 
     const [User,setUser] = useState([]);
 
-    const navigation = useNavigation();
-   
     const loadUsers = async () => {
         const data = await Users();
         setUser(data);
@@ -74,14 +72,9 @@ const styles = StyleSheet.create({
     itemText:{
         fontSize: 15,
         color: '#000',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: 'tahoma'
         
-    },
-    fab: {
-        position: 'absolute',
-        margin: 16,
-        right:0,
-        bottom:0
     }
 
 })
