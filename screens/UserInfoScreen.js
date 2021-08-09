@@ -14,10 +14,10 @@ const UserInfoScreen = ({route}) => {
         <Layout>
                 <Card style={styles.container}>
                     <Card.Content>
-                        <Paragraph><List.Icon icon="account-tie" /><Text style={styles.itemText}>Name:</Text>{user.name}</Paragraph>
-                        <Paragraph><List.Icon icon="at" /><Text style={styles.itemText}>Email:</Text>{user.email}</Paragraph>
-                        <Paragraph><List.Icon icon="bank" /><Text style={styles.itemText}>City:</Text>{user.address.city}</Paragraph>
-                        <Paragraph><List.Icon icon="briefcase" /><Text style={styles.itemText}>Company:</Text>{user.company.name}</Paragraph>
+                        <Paragraph style={styles.parag}><List.Icon icon="account-tie" /><Text style={styles.itemText}>Name:</Text>{user.name}</Paragraph>
+                        <Paragraph style={styles.parag}><List.Icon icon="at" /><Text style={styles.itemText}>Email:</Text>{user.email}</Paragraph>
+                        <Paragraph style={styles.parag}><List.Icon icon="bank" /><Text style={styles.itemText}>City:</Text>{user.address.city}</Paragraph>
+                        <Paragraph style={styles.parag}><List.Icon icon="briefcase" /><Text style={styles.itemText}>Company:</Text>{user.company.name}</Paragraph>
                     </Card.Content>
                 </Card> 
         </Layout>
@@ -32,9 +32,15 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly'
     },
+    parag:{
+        flexDirection: 'column',
+        alignItems: 'baseline',
+        justifyContent: 'center'
+    },
     itemText: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     }
+   
 })
 
 export default UserInfoScreen;

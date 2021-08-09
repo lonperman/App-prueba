@@ -45,10 +45,10 @@ const SearchScreen = () => {
         return(
             <Card style={styles.container}>
             <Card.Content>
-                <Paragraph><List.Icon icon="account-tie" /><Text style={styles.itemText}>Name:</Text>{item.name}</Paragraph>
-                <Paragraph><List.Icon icon="at" /><Text style={styles.itemText}>Email:</Text>{item.email}</Paragraph>
-                <Paragraph><List.Icon icon="bank" /><Text style={styles.itemText}>City:</Text>{item.address.city}</Paragraph>
-                <Paragraph><List.Icon icon="briefcase" /><Text style={styles.itemText}>Company:</Text>{item.company.name}</Paragraph>
+                <Paragraph style={styles.parag}><List.Icon icon="account-tie" /><Text style={styles.itemText}>Name:</Text>{item.name}</Paragraph>
+                <Paragraph style={styles.parag}><List.Icon icon="at" /><Text style={styles.itemText}>Email:</Text>{item.email}</Paragraph>
+                <Paragraph style={styles.parag}><List.Icon icon="bank" /><Text style={styles.itemText}>City:</Text>{item.address.city}</Paragraph>
+                <Paragraph style={styles.parag}><List.Icon icon="briefcase" /><Text style={styles.itemText}>Company:</Text>{item.company.name}</Paragraph>
             </Card.Content>
         </Card> 
         )
@@ -64,7 +64,7 @@ const SearchScreen = () => {
 
     return (
         <Layout>
-            <View style={styles.container}>
+            <View >
                 <Searchbar 
                     style={styles.textInput}
                     placeholder='Search Here'
@@ -86,10 +86,14 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
-        width: wp('97%')
-    
+        width: wp('97%'),
+        height: hp('40%'),
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly'    
     },
     textInput:{
+        width: wp('97%'),
         height: hp('8'),
         borderWidth: 1,
         paddingLeft: 20,
@@ -98,8 +102,14 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: 'white' 
     },
+    parag:{
+        flexDirection: 'column',
+        alignItems: 'baseline',
+        justifyContent: 'center'
+    },
      itemText: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        flexDirection: 'row',
     }
 })
 
