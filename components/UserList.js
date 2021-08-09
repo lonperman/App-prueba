@@ -29,24 +29,17 @@ const UserList = () => {
     return (
         <View >
             <DataTable style={styles.container}>
-                <DataTable.Header>
-                    <DataTable.Title >
+                <DataTable.Header style={styles.header}>
+                    <DataTable.Title style={styles.title} >
                         <Text style={styles.itemText}>Name</Text>
                     </DataTable.Title>
-                    <DataTable.Title>
+                    <DataTable.Title style={styles.title}>
                         <Text style={styles.itemText}>Email</Text>
                     </DataTable.Title>
-                    <DataTable.Title>
-                        <Text style={styles.itemText}>City</Text>
-                    </DataTable.Title>
-                    <DataTable.Title>
-                        <Text style={styles.itemText}>Company</Text>
-                    </DataTable.Title>
-                    <DataTable.Title>
+                    <DataTable.Title style={styles.title}>
                         <Text style={styles.itemText}>Action</Text>
                     </DataTable.Title>
                 </DataTable.Header>
-           
             </DataTable>
 
             <FlatList
@@ -63,18 +56,43 @@ const UserList = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#40e0d0',
+        alignSelf: 'center',
+        justifyContent: 'center',
         width: wp('97%'),
-        height: hp('10%'), 
-        padding: 10,
+        height: hp('10%'),
+        padding: 10, 
+        paddingRight: 10,
+        paddingBottom: 10,
+        borderRadius: 10
+    },
+    header: {
+        flexDirection: 'row',
+        backgroundColor: '#fff',
+        width: wp('90%'),
         borderRadius: 10,
-        textAlign: 'auto'
+        alignContent: 'space-around',
+        alignSelf: 'center',
+        marginRight: 50,
+        marginLeft: 50
+    },
+    title:{
+        backgroundColor: 'blue',
+        borderRadius: 10,
+        width: wp('90%'),
+        height: hp('7%'),
+        alignSelf: 'center',
+        flexDirection: 'column',
+        marginRight:20,
     },
     itemText:{
         fontSize: 15,
-        color: '#000',
+        color: '#fff',
+        width: wp('90%'),
         fontWeight: 'bold',
-        fontFamily: 'tahoma'
-        
+        fontFamily: 'tahoma',
+        backgroundColor: 'red',
+        marginRight: 10,
+        marginLeft: 10   
     }
 
 })

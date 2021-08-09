@@ -13,28 +13,17 @@ const UserItem = (users) => {
     return (
      
             <DataTable style={styles.container}>
-                <DataTable.Row >
-                    <DataTable.Cell>
-                        <Text style={styles.itemtext}>{user.name}</Text>
+                <DataTable.Row style={styles.UserRow}>
+                    <DataTable.Cell style={styles.UserCell}>
+                        <Text style={styles.Usertext}>{user.name}</Text>
                     </DataTable.Cell>
-                    <DataTable.Cell>
-                        <Text style={styles.itemtext}>{user.email}</Text>
+                    <DataTable.Cell style={styles.UserCell}>
+                        <Text style={styles.Usertext}>{user.email}</Text>
                     </DataTable.Cell>
-                    <DataTable.Cell>
-                        <Text style={styles.itemtext}>{user.address.city}</Text>
-                    </DataTable.Cell>
-                    <DataTable.Cell >
-                        <Text style={styles.itemtext}>{user.company.name}</Text>
-                    </DataTable.Cell>
-                    <DataTable.Cell>
+                    <DataTable.Cell style={styles.UserCell}>
                     <TouchableOpacity 
-                        style={{
-                            backgroundColor:'#e6e6fa', 
-                            borderRadius: 10,
-                            fontSize: 15
-                            }} 
                         onPress={() => navigation.navigate('UserInfoScreen', user)}>
-                         <Avatar.Icon style={{backgroundColor:'#000',marginLeft: 25}}  size={35} icon='account-details'/>
+                        <Avatar.Icon style={{backgroundColor:'#000',marginLeft: 30}}  size={35} icon='account-details'/>
                     </TouchableOpacity>
                     </DataTable.Cell>
                 </DataTable.Row>
@@ -46,20 +35,41 @@ const UserItem = (users) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#e6e6fa',
-        padding: 10,
-        marginVertical: 2,
-        borderRadius: 10,
-        justifyContent: 'center',
-        textAlign: 'auto',
         width: wp('97%'),
-        height: hp('10%'), 
+        height: hp('10%'),
+        padding: 10,
+        paddingRight: 10,
+        paddingBottom: 10,
+        borderRadius: 10,
+        marginVertical: 2,  
     },
-    itemtext: {
-        fontSize:13,
+    UserRow:{
+        backgroundColor: '#000',
+        flexDirection: 'column',
+        width: wp('90%'),
+        borderRadius:10,
+        justifyContent: 'space-between',
+        alignSelf: 'center',
+        marginRight: 50,
+        marginLeft: 50
+    },
+    UserCell:{
+        backgroundColor: 'red',
+        width: wp('90%'),
+        alignSelf: 'center',
+        marginRight: 30,
+
+    },
+    Usertext: {
+        fontSize:15,
         fontWeight: 'normal',
-        color: '#000',
-        fontFamily: 'tahoma'
+        width: wp('90%'),
+        color: '#fff',
+        fontFamily: 'tahoma',
+        marginRight: 10,
+        marginLeft: 10  
     }
+
 })
 
 export default UserItem;
