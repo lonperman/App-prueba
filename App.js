@@ -1,12 +1,13 @@
 import React from 'react';
-import { StyleSheet} from 'react-native';
+import { StyleSheet, TouchableOpacity} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Avatar } from 'react-native-paper';
+import { Avatar} from 'react-native-paper';
 
 
 import HomeScreen from './screens/HomeScreen';
 import UserInfoScreen from './screens/UserInfoScreen';
+import SearchScreen from './screens/SearchScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -18,24 +19,37 @@ const App = () => {
       <Stack.Navigator >
         <Stack.Screen name="HomeScreen"
           component={HomeScreen}
-          options={() => ({
+          options={({navigation}) => ({
             title: 'Users',
             headerStyle: {backgroundColor: '#778899'},
             headerTitleStyle: { color: '#fff'},
             headerRight: () => (
-              <Avatar.Icon style={{backgroundColor:'#000', marginRight: 20}}  size={40} icon='account'  />
+             <TouchableOpacity  onPress={() => navigation.navigate('SearchUser')}>
+                <Avatar.Icon style={{backgroundColor:'#000', marginRight: 20}}  size={40} icon='account-search' />
+             </TouchableOpacity>
             ),   
           })}
         />
         <Stack.Screen name="UserInfoScreen"
           component={UserInfoScreen}
           options={{
-            title: 'Info User',
+            title: 'Details',
             headerStyle: {backgroundColor: '#778899'},
             headerTitleStyle: { color: '#fff'},
             headerRight: () => (
-              <Avatar.Icon style={{backgroundColor:'#000', marginRight: 20}}  size={40} icon='account-details'  />
+              <Avatar.Icon style={{backgroundColor:'#000', marginRight: 20}}  size={40} icon='account-details'/>
             ),   
+          }}
+        />
+        <Stack.Screen name="SearchUser"
+          component={SearchScreen}
+          options={{
+            title: 'Search',
+            headerStyle: {backgroundColor: '#778899'},
+            headerTitleStyle: { color: '#fff'},
+            headerRight: () => (
+              <Avatar.Icon style={{backgroundColor:'#000', marginRight: 20}}  size={40} icon='account-details'/>
+            ),  
           }}
         />
       </Stack.Navigator>

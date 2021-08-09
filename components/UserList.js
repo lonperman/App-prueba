@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { FlatList,StyleSheet,View} from 'react-native';
-import {DataTable,Text,Divider } from 'react-native-paper';
+import {DataTable,Text} from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 import UserItem from './UserItem';
@@ -12,8 +13,8 @@ const UserList = () => {
 
     const [User,setUser] = useState([]);
 
+    const navigation = useNavigation();
    
-
     const loadUsers = async () => {
         const data = await Users();
         setUser(data);
@@ -46,7 +47,6 @@ const UserList = () => {
                     <DataTable.Title>
                         <Text style={styles.itemText}>Action</Text>
                     </DataTable.Title>
-                    <Divider />
                 </DataTable.Header>
            
             </DataTable>
@@ -60,6 +60,7 @@ const UserList = () => {
     );
 
 };
+
 
 const styles = StyleSheet.create({
     container: {
@@ -75,6 +76,12 @@ const styles = StyleSheet.create({
         color: '#000',
         fontWeight: 'bold'
         
+    },
+    fab: {
+        position: 'absolute',
+        margin: 16,
+        right:0,
+        bottom:0
     }
 
 })

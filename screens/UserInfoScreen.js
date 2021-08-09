@@ -9,9 +9,7 @@ import Layout from '../components/Layout';
 const UserInfoScreen = ({route}) => {
 
     const user = route.params;
-    console.log('datos', user)
-
-
+    
     return (
         <Layout>
                 <Card style={styles.container}>
@@ -21,14 +19,14 @@ const UserInfoScreen = ({route}) => {
                         <Paragraph><List.Icon icon="bank" /><Text style={styles.itemText}>City:</Text>{user.address.city}</Paragraph>
                         <Paragraph><List.Icon icon="briefcase" /><Text style={styles.itemText}>Company:</Text>{user.company.name}</Paragraph>
                     </Card.Content>
-                </Card>
+                </Card> 
         </Layout>
     )
 }
 
 const styles = StyleSheet.create({
     container:{
-        width: wp('100%'),
+        width: wp('97%'),
         height: hp('40%'),
         alignItems: 'center',
         flexDirection: 'row',

@@ -8,8 +8,6 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 const UserItem = (users) => {
     
     const {user} = users;
-    //console.log(user);
-
     const navigation = useNavigation();
 
 
@@ -32,15 +30,14 @@ const UserItem = (users) => {
                     <DataTable.Cell>
                     <TouchableOpacity 
                         style={{
-                            backgroundColor:'#fff', 
+                            backgroundColor:'#e6e6fa', 
                             borderRadius: 10,
                             fontSize: 15
                             }} 
                         onPress={() => navigation.navigate('UserInfoScreen', user)}>
-                         <Avatar.Icon style={{backgroundColor:'#000'}}  size={35} icon='account-details'/>
+                         <Avatar.Icon style={{backgroundColor:'#000',marginLeft: 25}}  size={35} icon='account-details'/>
                     </TouchableOpacity>
                     </DataTable.Cell>
-                    <Divider/>
                 </DataTable.Row>
             </DataTable>
        
