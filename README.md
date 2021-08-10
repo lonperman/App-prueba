@@ -39,5 +39,16 @@ npm install @react-navigation/native
 https://reactnavigation.org/docs/getting-started/
 ```
 
+  <h2 align="center">Manuel ALejandro Perdomo</h2>
+      <p align="center">
+        <a href="https://www.linkedin.com/in/manuelperdomo-a0b60a175/" target="_blank">
+            <img alt="linkedin_page" src="https://raw.githubusercontent.com/EckoJuan/Readme_template/master/images/linkedin.png" style="float: center; margin-right: 10px" height="50"  width="50">
+        </a>
+        <a href="https://lonperman.medium.com/" target="_blank">
+            <img alt="medium_page" src="https://raw.githubusercontent.com/EckoJuan/Readme_template/master/images/medium.png" style="float: center; margin-right: 10px" height="50" width="50">
+        </a>
+</p>
 
+
+__July, 2021.__
 
