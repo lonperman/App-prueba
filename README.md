@@ -40,13 +40,26 @@ https://reactnavigation.org/docs/getting-started/
 ```
 
 ## Examples
+
+<h2 align="center">HomeScreen</h2>
 <p align="center">
   <img src="./img/HomeScreen.png"  target="_blank" />
 </p>
+<br>
+<h2 align="center">Details</h2>
 <p align="center">
   <img src="./img/Details.png"  target="_blank" />
 </p>
-
+<br>
+<h2 align="center">Search</h2>
+<p align="center">
+  <img src="./img/Search.png"  target="_blank" />
+</p>
+<br>
+<h2 align="center">Search User</h2>
+<p align="center">
+  <img src="./img/SearchUser.png"  target="_blank" />
+</p>
 
 ---
 
