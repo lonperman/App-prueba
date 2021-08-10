@@ -1,12 +1,12 @@
 {
   "expo": {
     "name": "SearchUser",
-    "slug": "SearchUser",
+    "slug": "prueba",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/avatar.jpg",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
