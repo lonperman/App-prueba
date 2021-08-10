@@ -45,10 +45,30 @@ const SearchScreen = () => {
         return(
             <Card style={styles.container}>
             <Card.Content>
-                <Paragraph style={styles.parag}><List.Icon icon="account-tie" /><Text style={styles.itemText}>Name:</Text>{item.name}</Paragraph>
-                <Paragraph style={styles.parag}><List.Icon icon="at" /><Text style={styles.itemText}>Email:</Text>{item.email}</Paragraph>
-                <Paragraph style={styles.parag}><List.Icon icon="bank" /><Text style={styles.itemText}>City:</Text>{item.address.city}</Paragraph>
-                <Paragraph style={styles.parag}><List.Icon icon="briefcase" /><Text style={styles.itemText}>Company:</Text>{item.company.name}</Paragraph>
+                <Paragraph style={styles.parag}>
+                    <List.Icon style={styles.itemIcon} icon="account-tie" /><Text style={styles.itemText}>Name:</Text>
+                </Paragraph>
+                <Paragraph style={styles.parag}>
+                    <Text style={styles.itemText2}>{item.name}</Text>
+                </Paragraph>
+                <Paragraph style={styles.parag}>
+                    <List.Icon style={styles.itemIcon} icon="at" /><Text style={styles.itemText}>Email:</Text>
+                </Paragraph>
+                <Paragraph style={styles.parag}>
+                    <Text style={styles.itemText2}>{item.email}</Text>
+                </Paragraph>
+                <Paragraph style={styles.parag}>
+                    <List.Icon style={styles.itemIcon} icon="bank" /><Text style={styles.itemText}>City:</Text>
+                </Paragraph>
+                <Paragraph style={styles.parag}>
+                    <Text style={styles.itemText2}>{item.address.city}</Text>
+                </Paragraph>
+                <Paragraph style={styles.parag}>
+                    <List.Icon style={styles.itemIcon} icon="briefcase" /><Text style={styles.itemText}>Company:</Text>
+                </Paragraph>
+                <Paragraph style={styles.parag}>
+                    <Text style={styles.itemText2}>{item.company.name}</Text>
+                </Paragraph>
             </Card.Content>
         </Card> 
         )
@@ -85,19 +105,19 @@ const SearchScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
         width: wp('97%'),
-        height: hp('40%'),
+        height: hp('50%'),
         alignItems: 'center',
         flexDirection: 'row',
-        justifyContent: 'space-evenly'    
+        marginVertical: '1.5%'
     },
     textInput:{
         width: wp('97%'),
         height: hp('8'),
         borderWidth: 1,
         paddingLeft: 20,
-        margin: 5,
+        margin: '0%',
+        padding: '0%',
         borderColor: '#009688',
         borderRadius: 10,
         backgroundColor: 'white' 
@@ -105,11 +125,23 @@ const styles = StyleSheet.create({
     parag:{
         flexDirection: 'column',
         alignItems: 'baseline',
-        justifyContent: 'center'
+        margin: '0%',
+        padding: '0%'
     },
      itemText: {
-        fontWeight: 'bold',
-        flexDirection: 'row',
+        fontWeight: 'normal',
+    },
+    itemText2:{
+        padding: '0%',
+        marginLeft: '15%',
+        fontSize: '18px',
+        fontWeight: 'bold'
+    },
+    itemIcon: {
+        margin:'0%',
+        marginRight: '3%',
+        padding:'0%',
+        height: '90%'
     }
 })
 

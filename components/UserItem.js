@@ -17,14 +17,10 @@ const UserItem = (users) => {
                     <DataTable.Cell style={styles.UserCell}>
                         <Text style={styles.Usertext}>{user.name}</Text>
                     </DataTable.Cell>
-                    <DataTable.Cell style={styles.UserCell}>
-                        <Text style={styles.Usertext}>{user.email}</Text>
-                    </DataTable.Cell>
-                    <DataTable.Cell style={styles.UserCell}>
-                    <TouchableOpacity 
-                        onPress={() => navigation.navigate('UserInfoScreen', user)}>
-                        <Avatar.Icon style={{backgroundColor:'#000',marginLeft: 30}}  size={35} icon='account-details'/>
-                    </TouchableOpacity>
+                    <DataTable.Cell style={styles.UserCellIcon}>
+                        <TouchableOpacity style={styles.UserTouch}  onPress={() => navigation.navigate('UserInfoScreen', user)}>
+                            <Avatar.Icon size={30} style={styles.UserIcon} icon='magnify'/>
+                        </TouchableOpacity>
                     </DataTable.Cell>
                 </DataTable.Row>
             </DataTable>
@@ -41,30 +37,42 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingBottom: 10,
         borderRadius: 10,
-        marginVertical: 2,  
+        marginVertical: 2
     },
     UserRow:{
-        backgroundColor: '#000',
-        flexDirection: 'column',
+        flexDirection: 'row',
         width: wp('90%'),
-        borderRadius:10,
+        border: 'none',
+        marginLeft: '1%', 
         justifyContent: 'space-between',
-        alignSelf: 'center',
-        marginRight: 50,
-        marginLeft: 50
+        alignSelf: 'stretch',
+        flexWrap: 'wrap',
+        alignContent: 'space-around'
     },
     UserCell:{
-        backgroundColor: 'red',
         width: wp('90%'),
-        alignSelf: 'center',
-        marginRight: 30,
-
+        flexShrink: 1,
+        flexGrow: 0,
+        flexBasis: '75%'
+    },
+    UserTouch:{
+        width: wp('100%'),
+    },
+    UserCellIcon:{
+        width: wp('100%'),
+        flexShrink: 1,
+        flexGrow: 0,
+        flexBasis: '25%'
+    },
+    UserIcon:{
+        backgroundColor: '#2b2b2b',
+        marginLeft: '10%'
     },
     Usertext: {
         fontSize:15,
         fontWeight: 'normal',
         width: wp('90%'),
-        color: '#fff',
+        color: '#000',
         fontFamily: 'tahoma',
         marginRight: 10,
         marginLeft: 10  

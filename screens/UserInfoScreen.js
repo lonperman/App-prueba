@@ -14,10 +14,30 @@ const UserInfoScreen = ({route}) => {
         <Layout>
                 <Card style={styles.container}>
                     <Card.Content>
-                        <Paragraph style={styles.parag}><List.Icon icon="account-tie" /><Text style={styles.itemText}>Name:</Text>{user.name}</Paragraph>
-                        <Paragraph style={styles.parag}><List.Icon icon="at" /><Text style={styles.itemText}>Email:</Text>{user.email}</Paragraph>
-                        <Paragraph style={styles.parag}><List.Icon icon="bank" /><Text style={styles.itemText}>City:</Text>{user.address.city}</Paragraph>
-                        <Paragraph style={styles.parag}><List.Icon icon="briefcase" /><Text style={styles.itemText}>Company:</Text>{user.company.name}</Paragraph>
+                        <Paragraph style={styles.parag}>
+                            <List.Icon style={styles.itemIcon} icon="account-tie" /><Text style={styles.itemText}>Name:</Text>
+                        </Paragraph>
+                        <Paragraph style={styles.parag}>
+                            <Text style={styles.itemText2}>{user.name}</Text>
+                        </Paragraph>
+                        <Paragraph style={styles.parag}
+                            ><List.Icon style={styles.itemIcon} icon="at" /><Text style={styles.itemText}>Email:</Text>
+                        </Paragraph>
+                        <Paragraph style={styles.parag}>
+                            <Text style={styles.itemText2}>{user.email}</Text>
+                        </Paragraph>
+                        <Paragraph style={styles.parag}>
+                            <List.Icon style={styles.itemIcon} icon="bank" /><Text style={styles.itemText}>City:</Text>
+                        </Paragraph>
+                        <Paragraph style={styles.parag}>
+                            <Text style={styles.itemText2}>{user.address.city}</Text>
+                        </Paragraph>
+                        <Paragraph style={styles.parag}>
+                            <List.Icon style={styles.itemIcon} icon="briefcase" /><Text style={styles.itemText}>Company:</Text>
+                        </Paragraph>
+                        <Paragraph style={styles.parag}>
+                            <Text style={styles.itemText2}>{user.company.name}</Text>
+                        </Paragraph>
                     </Card.Content>
                 </Card> 
         </Layout>
@@ -29,16 +49,28 @@ const styles = StyleSheet.create({
         width: wp('97%'),
         height: hp('40%'),
         alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: 'space-evenly'
+        flexDirection: 'row'
     },
     parag:{
         flexDirection: 'column',
         alignItems: 'baseline',
-        justifyContent: 'center'
+        margin: '0%',
+        padding: '0%'
+    },
+    itemText2:{
+        padding: '0%',
+        marginLeft: '15%',
+        fontSize: '18px',
+        fontWeight: 'bold'
     },
     itemText: {
-        fontWeight: 'bold',
+        fontWeight: 'normal'
+    },
+    itemIcon: {
+        margin:'0%',
+        marginRight: '3%',
+        padding:'0%',
+        height: '90%'
     }
    
 })
