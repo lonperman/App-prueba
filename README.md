@@ -2,7 +2,7 @@
 
 - Aplicacion movil diseñada en react native con material design, cuenta con react navigate y otros componentes.
 
-- La aplicacion solamente realiza una peticion GET a una api publica y apartir de esta peticion se realiza diferentes usos de los datos recibidos.
+- La aplicacion realiza una peticion GET a una api publica y apartir de esta peticion se realiza diferentes usos de los datos recibidos.
 
 - Antes de iniciar el proyecto instalar todas las dependecias con el siguiente comando.
 
@@ -50,5 +50,5 @@ https://reactnavigation.org/docs/getting-started/
 </p>
 
 
-__July, 2021.__
+__August, 2021.__
 
